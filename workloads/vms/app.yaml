@@ -1,17 +1,17 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: infra-root
+  name: vms
   namespace: argocd
 spec:
   project: default
   source:
     repoURL: https://github.com/Mastergamer433/vmm-sevfa01.git
     targetRevision: master
-    path: infra
+    path: workloads/vms
   destination:
     server: https://kubernetes.default.svc
-    namespace: argocd
+    namespace: default
   syncPolicy:
     automated:
       prune: true
