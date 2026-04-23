@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/Mastergamer433/vmm-sevfa01.git
     targetRevision: master
-    path: platform/cdi
+    path: infra/platform/cdi
   destination:
     server: https://kubernetes.default.svc
     namespace: argocd
@@ -27,7 +27,7 @@ spec:
   source:
     repoURL: https://github.com/Mastergamer433/vmm-sevfa01.git
     targetRevision: master
-    path: platform/cilium
+    path: infra/platform/cilium
   destination:
     server: https://kubernetes.default.svc
     namespace: argocd
@@ -46,7 +46,7 @@ spec:
   source:
     repoURL: https://github.com/Mastergamer433/vmm-sevfa01.git
     targetRevision: master
-    path: platform/multus
+    path: infra/platform/multus
   destination:
     server: https://kubernetes.default.svc
     namespace: argocd
@@ -65,7 +65,7 @@ spec:
   source:
     repoURL: https://github.com/Mastergamer433/vmm-sevfa01.git
     targetRevision: master
-    path: platform/kubevirt
+    path: infra/platform/kubevirt
   destination:
     server: https://kubernetes.default.svc
     namespace: argocd
