@@ -1,0 +1,75 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: cdi
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/Mastergamer433/vmm-sevfa01.git
+    targetRevision: master
+    path: platform/cdi
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: argocd
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: cilium
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/Mastergamer433/vmm-sevfa01.git
+    targetRevision: master
+    path: platform/cilium
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: argocd
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: multus
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/Mastergamer433/vmm-sevfa01.git
+    targetRevision: master
+    path: platform/multus
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: argocd
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: kubevirt
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/Mastergamer433/vmm-sevfa01.git
+    targetRevision: master
+    path: platform/kubevirt
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: argocd
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true

@@ -28,8 +28,6 @@ spec:
     repoURL: https://github.com/Mastergamer433/vmm-sevfa01.git
     targetRevision: master
     path: platform
-    directory:
-      recurse: true
   destination:
     server: https://kubernetes.default.svc
     namespace: argocd
