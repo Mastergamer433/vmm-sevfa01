@@ -1,18 +1,21 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: multus
+  name: vms
   namespace: argocd
-  annotations:
-    argocd.argoproj.io/sync-wave: "1"
 spec:
   project: default
+
   source:
-    repoURL: https://github.com/k8snetworkplumbingwg/multus-cni
+    repoURL: https://github.com/Mastergamer433/vmm-sevfa01.git
     targetRevision: master
-    path: deployments
+    path: workloads/vms
+
   destination:
     server: https://kubernetes.default.svc
-    namespace: kube-system
+    namespace: argocd
+
   syncPolicy:
-    automated: {}
+    automated:
+      prune: true
+      selfHeal: true

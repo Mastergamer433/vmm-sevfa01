@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: root
+  name: platform
   namespace: argocd
 spec:
   project: default
@@ -9,7 +9,7 @@ spec:
   source:
     repoURL: https://github.com/Mastergamer433/vmm-sevfa01.git
     targetRevision: master
-    path: .
+    path: infra/platform
 
   destination:
     server: https://kubernetes.default.svc
